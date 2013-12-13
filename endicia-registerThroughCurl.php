@@ -2,13 +2,13 @@
 
 
 
-$URL = "https://www.endicia.com/labelserver/login.cfm";
+
 $URL = "https://www.endicia.com/ELS/ELSServices.cfc?wsdl";
 $xmlRequest = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
   <UserSignupRequest> 
     <FirstName>reddy</FirstName> 
-    <Test>Y</Test> 
+    <Test>N</Test> 
     <LastName>Customer</LastName> 
     <EmailAddress>sriram.reddy@bigcommerce.com</EmailAddress> 
     <EmailConfirm>sriram.reddy@bigcommerce.com</EmailConfirm> 
@@ -24,7 +24,7 @@ $xmlRequest = <<<XML
     <ChallengeQuestion>Next door?</ChallengeQuestion> 
     <ChallengeAnswer>Dentist</ChallengeAnswer> 
 
-    <PartnerId>xxxx</PartnerId> 
+    <PartnerId>lbig</PartnerId> 
     <ProductType>LABELSERVER</ProductType> 
     <CreditCardNumber>4111111111111111</CreditCardNumber> 
     <CreditCardAddress>247 High St.</CreditCardAddress> 
@@ -47,7 +47,7 @@ curl_setopt ($curl_handle, CURLOPT_POST, 1);
 curl_setopt ($curl_handle, CURLOPT_POSTFIELDS, '&method=UserSignup&XMLInput=' . $xmlRequest);
 
 $curl_result = curl_exec ($curl_handle) or die ("There has been a CURL_EXEC error");
-var_dump(curl_getinfo($curl_handle));
+
 curl_close ($curl_handle);
 var_dump($curl_result);
 
