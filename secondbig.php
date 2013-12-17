@@ -12,10 +12,15 @@ for($i=1;$i<$length;$i++)
   {
       $max = $values[$i];
   }
-  if ($secondMax < $values[$i]);
+  
+  if ($secondMax < $values[$i] && $values[$i]!=$max){
+      $secondMax = $values[$i];
+  }
 
 }
 
 echo $max;
+echo "<br>";
+echo $secondMax;
 
 ?>
