@@ -2,17 +2,18 @@
 
 
 
-$URL = "https://www.envmgr.com/LabelService/EwsLabelService.asmx/ChangePassPhraseXML";
+//$URL = "https://www.envmgr.com/LabelService/EwsLabelService.asmx/ChangePassPhraseXML";
+$URL = "https://elstestserver.endicia.com/LabelService/EwsLabelService.asmx/ChangePassPhraseXML";
 $xmlRequest = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
  <ChangePassPhraseRequest> 
-  <RequesterID>lbig</RequesterID> 
+  <RequesterID>lXXX</RequesterID> 
   <RequestID>rtbig</RequestID> 
   <CertifiedIntermediary> 
-    <AccountID>1164094</AccountID> 
-    <PassPhrase>passphrase</PassPhrase> 
+    <AccountID>2500901</AccountID> 
+    <PassPhrase>reddy1409</PassPhrase> 
   </CertifiedIntermediary> 
-  <NewPassPhrase>reddy1409</NewPassPhrase> 
+  <NewPassPhrase>testphrase</NewPassPhrase> 
  </ChangePassPhraseRequest>
 XML;
 
